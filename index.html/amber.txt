@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Amber</title>
+    <!-- Botpress stylesheet -->
+    <link rel="stylesheet" href="https://webchat-styler-css.botpress.app/prod/7176eb53-e361-45eb-a5b4-4f5488c8286a/v58147/style.css">
+</head>
+<body>
+
+<!-- Your website content here -->
+
+<!-- Botpress Webchat Script -->
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with Amber",
+      "botConversationDescription": "Book a meeting with Amber",
+      "botId": "e091b23b-a06e-4bad-b2fd-88eec202deb5",
+      "clientId": "e091b23b-a06e-4bad-b2fd-88eec202deb5",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "botName": "Test",
+      "avatarUrl": "data:image/png;base64,...",  // truncated for brevity
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/7176eb53-e361-45eb-a5b4-4f5488c8286a/v58147/style.css",
+      "useSessionStorage": true,
+      "showBotInfoPage": true,
+      "containerWidth": "100%25",
+      "layoutWidth": "100%25",
+      "hideWidget": true,
+      "disableAnimations": true,
+  });
+  
+  // Opens up the Chatbot by default
+  window.botpressWebChat.onEvent(
+      function () {
+          window.botpressWebChat.sendEvent({ type: "show" });
+      },
+      ["LIFECYCLE.LOADED"]
+  );
+</script>
+
+</body>
+</html>
